@@ -1,0 +1,205 @@
+
+/* -------- Global Reset -------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f1724;
+  color: #dfdfdfff;
+}
+
+/* -------- Links -------- */
+a {
+  color: #06b6d4;
+  text-decoration: none;
+}
+
+/* -------- Main Wrapper -------- */
+.inner {
+  width: 95%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* -------- Header -------- */
+.site-header {
+  background: #0d1624;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.site-header .inner {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Avatar */
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Intro Text */
+.intro h1 {
+  margin: 0 0 6px;
+  font-size: 24px;
+}
+
+.role {
+  margin: 0;
+  color: #9aa4b2;
+}
+
+.contact {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+/* -------- Page Container -------- */
+.container {
+  max-width: 980px;
+  margin: 20px auto;
+  padding: 0 16px;
+}
+
+/* Cards */
+.card {
+  background: #1a2333;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+/* -------- Skills List -------- */
+.skills {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.skills li {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #9aa4b2;
+}
+
+/* -------- Projects -------- */
+.project-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.project img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.project figcaption {
+  padding: 8px 0;
+}
+
+/* -------- Contact Form -------- */
+#contact-form {
+  display: grid;
+  gap: 10px;
+  max-width: 600px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: transparent;
+  color: #ffffff;
+}
+
+#contact-form button {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  background: #06b6d4;
+  color: #012;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Small note text */
+.note {
+  font-size: 13px;
+  color: #9aa4b2;
+  margin-top: 6px;
+}
+
+/* -------- Footer -------- */
+.site-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 18px 0;
+  margin-top: 18px;
+}
+
+.site-footer .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+/* =========================================
+   RESPONSIVENESS
+   Desktop + Tablet + Mobile
+========================================= */
+
+/* -------- TABLET (Max width 1024px) -------- */
+@media (max-width: 1024px) {
+  .site-header .inner {
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .project img {
+    height: 130px;
+  }
+}
+
+/* -------- MOBILE (Max width 600px) -------- */
+@media (max-width: 600px) {
+  .site-header .inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .intro h1 {
+    font-size: 20px;
+  }
+
+  .project img {
+    height: 120px;
+  }
+
+  .site-footer .inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
